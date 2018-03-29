@@ -4,9 +4,20 @@ body {
 	font-size: 15px;
 	line-height: 21px;
 	background-color: #090B0D;
-	background-image: url(../../assets/images/bg.png);
-    background-repeat: no-repeat;
 	color: #ffffff;
+}
+
+a:hover img.diamond {
+
+}
+
+img.background {
+    position:absolute;
+    left:0px;
+    top:300px;
+    z-index:-1;
+    width: 100%;
+    height: auto;
 }
 
 img.rounded-circle {
@@ -49,6 +60,7 @@ a:link,
 a:visited, 
 a:active  {
     color: #ccc;
+
 }
 
 a:hover {
@@ -73,7 +85,9 @@ footer {
 
 
 #logo {
-	width: 300px;
+	margin-top: -80px;	
+	width: 400px;
+	margin-bottom: -60px;
 }
 
 #subscribe-icons {
@@ -125,6 +139,7 @@ footer {
 	position: fixed;
 	top: 0;
 	right: 0;
+	font-size: 13px;
 	text-align: right;
 }
 
@@ -169,6 +184,9 @@ footer {
 }
 
 @media only screen and (max-width: 480px) {
+	#logo {
+		width: 300px;
+	}
     .desktop-view {
         display: none;
     }
@@ -228,10 +246,17 @@ footer {
 		font-size: 18px;
 		line-height: 27px;
 		background-color: #090B0D;
-		background-image: url(../../assets/images/small-bg.png);
 		color: #ffffff;
 	}
 
+	img.background {
+	    position:absolute;
+	    left:0px;
+	    top:700px;
+	    z-index:-1;
+	    width: 100%;
+	    height: auto;
+	}
 
 	h2 {
 		margin-top: 100px;
@@ -269,7 +294,15 @@ footer {
 		line-height: 27px;
 		background-color: #090B0D;
 		color: #ffffff;
-		background-image: url(../../assets/images/small-bg.png);
+	}
+
+	img.background {
+	    position:absolute;
+	    left:0px;
+	    top:700px;
+	    z-index:-1;
+	    width: 400px;
+	    height: auto;
 	}
 
 	h2 {
