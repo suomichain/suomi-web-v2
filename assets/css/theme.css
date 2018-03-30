@@ -192,9 +192,15 @@ footer {
     }
 
     .mobile-img {
-    	width: 300px;
+    	width: 350px;
     	height: auto;
     }
+
+	.architecture {
+		height: 450px; 
+		width: auto;
+		margin-left: 20px;
+	}
 
     .border-bottom {
     	margin-left: -20px;
@@ -276,6 +282,19 @@ footer {
 		margin-top: 20px;	
 		font-size: 21px;
 	}
+
+	.mobile-menu {
+		width: 100%;
+		position: fixed;
+		top: 0;
+		right: 0;
+		font-size: 13px;
+		text-align: left;
+		background-color: #090B0D;
+		display: flex;
+		justify-content: space-between;
+	}
+
 }
 
 @media only screen and (max-width: 400px) {
@@ -371,6 +390,18 @@ footer {
 	#features img {
 		margin-top: 20px;
 		height: 40px;
+	}
+
+	.mobile-menu {
+		width: 100%;
+		position: fixed;
+		top: 0;
+		right: 0;
+		font-size: 13px;
+		text-align: left;
+		background-color: #090B0D;
+		display: flex;
+		justify-content: space-between;
 	}
 
 }

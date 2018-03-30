@@ -26,7 +26,7 @@
     <link href="assets/css/card.css" rel="stylesheet">
     <link href="assets/css/bullet.css" rel="stylesheet">
     <link href="assets/css/timeline.css" rel="stylesheet">
-
+    <link href="assets/css/sidenav.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -52,7 +52,7 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
             <section class="header">
 
                 <div id="title" class="text-center">
-                    <img id="logo" class="mr-auto ml-auto" src="assets/images/logo.gif"  alt="logo">
+                    <img id="logo" class="mr-auto ml-auto mt-1" src="assets/images/logo.gif"  alt="logo">
                     <p class="mt-3 mb-2 pl-5 pr-5">Establish A Global Business Ecosystem For Enterprises and Society </p>
                     <p class="mb-5 pl-5 pr-5">Build, deploy and run highly modular distributed ledgers for multiple needs.</p>
                 </div>
@@ -432,7 +432,7 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                                     <p class="bullet-body">The leader needs to wait a random time from VRG after publishing the new block</p>
                                     <p class="bullet-body">After the waiting period, the restricted node could register as candidate node</p>               
                                 </div>
-                            </li>                        
+                            </li>
                         </ul>
                     </div>
                     <div class="col-sm ml-offset desktop-view">
@@ -455,7 +455,7 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
 
                     <div class="col-sm mobile-view">
                         <h3 class="mb-4">Fast Proof of Work</h3>
-                        <img class="ml-1 mt-4 mb-5 mobile-img" src="assets/images/fastpow.gif
+                        <img class="ml-2 mt-4 mb-5 mobile-img" src="assets/images/fastpow.gif
                         " alt="fast proof of work">
                         <p>Four different node types:</p>
                         <p>General > Candidate > Leader > Restricted</p>
@@ -468,7 +468,7 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                                     <div class="bullet-heading">
                                         <h4 class="bullet-title">Sign up phase</h4>
                                     </div>
-                                    <p class="bullet-body">General node could register as candidate node</p>      
+                                    <p class="bullet-body">General node could register as candidate node</p>
                                 </div>
                             </li>
                             <li class="bullet">
@@ -478,7 +478,7 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                                         <h4 class="bullet-title">Election phase</h4>
                                     </div>
                                     <p class="bullet-body">Every candidate requests a random number via VRG</p>
-                                    <p class="bullet-body">The candidate who has the smallest number would be elected as leader to publish the new block</p>                    
+                                    <p class="bullet-body">The candidate who has the smallest number would be elected as leader to publish the new block</p>
                                 </div>
                             </li>
                             <li class="bullet">
@@ -486,11 +486,11 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                                 <div class="bullet-panel">
                                     <div class="bullet-heading">
                                         <h4 class="bullet-title">Restricted phase</h4>
-                                    </div>                           
+                                    </div>
                                     <p class="bullet-body">The leader needs to wait a random time from VRG after publishing the new block</p>
-                                    <p class="bullet-body">After the waiting period, the restricted node could register as candidate node</p>               
+                                    <p class="bullet-body">After the waiting period, the restricted node could register as candidate node</p>
                                 </div>
-                            </li>                        
+                            </li>
                         </ul>
                     </div>        
 
@@ -508,7 +508,7 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
 
                     <div class="pl-3 pr-3 mobile-view">
                         <h3 class="mb-5">Highly Expressive and Safe Smart Contract</h3>
-                        <img class="ml-0 mt-3 mobile-img" src="assets/images/expressive.png" alt="Highly Expressive and Safe Smart Contract">
+                        <img class="ml-2 mt-3 mobile-img" src="assets/images/expressive.png" alt="Highly Expressive and Safe Smart Contract">
                     </div>
 
                 </div>
@@ -717,7 +717,7 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                         </div>
 
                         <div class="col-sm-2">
-                            <img src="assets/images/NicoHötti.png" class="rounded-circle" alt="Nico Hötti">
+                            <img src="assets/images/NicoHotti.png" class="rounded-circle" alt="Nico Hötti">
                             <h4>Nico Hötti</h4>
                             <p>Growth & Investor Relation</p>
                         </div>
@@ -799,7 +799,7 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                         </div>
 
                         <div class="grid-mobile">
-                            <img src="assets/images/NicoHötti.png" class="rounded-circle" alt="Nico Hötti">
+                            <img src="assets/images/NicoHotti.png" class="rounded-circle" alt="Nico Hötti">
                             <h4>Nico Hötti</h4>
                             <p>Growth & Investor Relation</p>
                         </div>
@@ -1007,7 +1007,26 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                     <p>Copyright © 2018 - <a href="https://suomichain.io/"> Supershare</a></p>
             </footer>
         </div>
+        <div class="mobile-view">
+            <nav id="sidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <ul class="mt-5 pt-5 text-center">
+                    <li class="mb-3"><a href="#about-us" onclick="closeNav()">About us</a></li>
+                    <li class="mb-3"><a href="#highlights" onclick="closeNav()">Project highlights</a></li>
+                    <li class="mb-3"><a href="#technologies" onclick="closeNav()">Key technologies</a></li>
+                    <li class="mb-3"><a href="#scenarios" onclick="closeNav()">Typical scenarios</a></li>
+                    <li class="mb-3"><a href="#roadmap" onclick="closeNav()">Roadmap</a></li>
+                    <li class="mb-3"><a href="#team" onclick="closeNav()">Team</a></li>
+                    <li class="mb-3"><a href="#contact-us" onclick="closeNav()">Contact us</a></li>
+                    <li class="mb-3"><a href="#whitepaper" onclick="closeNav()">Tech whitepaper</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
+    <section class="mobile-menu" style="height: 100px;" onclick="openNav()">
+        <img id="logo-small" class="pt-1 pb-1 pl-2" src="assets/images/logo-small.png" style="height: 40px; width: 102px" alt="logo">
+        <img id="menu" class="pt-2 pb-1 pr-2" src="assets/images/menu.png" style="height: 27.5px; width: 27.5px;" alt="menu">
+    </section>
     <div class="col-sm-1 desktop-view">
         <nav class="nav-menu mr-5 mt-5">
             <ul>
@@ -1022,6 +1041,7 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
             </ul>
         </nav>
     </div>
+
     <!-- Scripts
 ================================================== -->
     <!-- jQuery -->
