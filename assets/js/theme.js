@@ -15,16 +15,17 @@ $('.single-item').slick({
 
 $('.center').slick({
   centerMode: true,
-  centerPadding: '10%',
-  slidesToShow: 3,
+  arrows: false,
+  centerPadding: '20%',
+  slidesToShow: 1,
   responsive: [
     {
-      breakpoint: 480,
+      breakpoint: 414,
       settings: {
         arrows: false,
-  		centerPadding: '10%',
+  		  centerPadding: '20%',
         centerMode: true,
-        slidesToShow: 3
+        slidesToShow: 1
       }
     }
   ]

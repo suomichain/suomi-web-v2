@@ -198,8 +198,13 @@ footer {
 }
 
 @media only screen and (max-width: 480px) {
+	#scenarios .grid-mobile {
+		width: 180px;
+	}
+
 	.center {
 		height: 350px;
+		margin-left: -12.5px;
 	}
 
 	#about-us .single-item {
@@ -332,6 +337,15 @@ footer {
 }
 
 @media only screen and (max-width: 400px) {
+	#scenarios .grid-mobile {
+		width: 170px;
+	}
+
+	.center {
+		height: 350px;
+		margin-left: -2.5px;
+	}
+
 	.slick-list {
 		height: 700px;
 	}
