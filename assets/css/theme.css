@@ -1,14 +1,10 @@
 body {
 	font-family: "Titillium Web";
 	font-weight: 200;
-	font-size: 15px;
-	line-height: 21px;
+	font-size: 16px;
+	line-height: 22px;
 	background-color: #090B0D;
 	color: #ffffff;
-}
-
-a:hover img.diamond {
-
 }
 
 img.background {
@@ -53,15 +49,19 @@ h3 {
 
 h4 {
 	margin-top: 20px;	
-	font-size: 15px;
+	font-size: 16px;
 }
 
 a:link, 
-a:visited, 
+a:visited {
+	color: #ccc;
+}
+
 a:active  {
     color: #ccc;
-
+    font-weight: 600;
 }
+
 
 a:hover {
     color: white;
@@ -95,6 +95,9 @@ footer {
 	justify-content: center;
 }
 
+.text-uppercase {
+	margin-bottom: 10px;
+}
 
 .subscribe-icon {
 	text-align: center;
@@ -183,7 +186,34 @@ footer {
 	width: auto;
 }
 
+#logo-small {
+	height: 50px; 
+	width: 145px;
+}
+
+#menu {
+	padding-top: 15px; 
+	height: 32.5px; 
+	width: 32.5px;
+}
+
 @media only screen and (max-width: 480px) {
+	.center {
+		height: 350px;
+	}
+
+	#about-us .single-item {
+		height: 350px;
+	}
+	
+	.slick-list {
+		height: 650px;
+	}
+
+	.slider-page-1 {
+		margin-left: -15px;
+	}
+
 	#logo {
 		width: 300px;
 	}
@@ -197,9 +227,8 @@ footer {
     }
 
 	.architecture {
-		height: 450px; 
-		width: auto;
-		margin-left: 20px;
+		height: auto; 
+		width: 350px;
 	}
 
     .border-bottom {
@@ -221,8 +250,13 @@ footer {
 	}
 
 	.grid-mobile {
-		width: 180px;
+		width: 190px;
 		height: auto;
+	}
+
+	.grid-mobile img {
+		margin-right: auto;
+		margin-left: auto;
 	}
 
 	.ml-offset {
@@ -298,12 +332,24 @@ footer {
 }
 
 @media only screen and (max-width: 400px) {
+	.slick-list {
+		height: 700px;
+	}
+
+	.single-item {
+		margin-left: 25px;
+	}
+
+	#about-us .single-item {
+		height: 350px;
+	}
+
     .desktop-view {
         display: none;
     }
 
 	span {
-	  color: #2cd098;	
+	  	color: #2cd098;	
 	}
 
     body {
@@ -320,7 +366,7 @@ footer {
 	    left:0px;
 	    top:700px;
 	    z-index:-1;
-	    width: 400px;
+	    width: 100%;
 	    height: auto;
 	}
 
@@ -343,14 +389,14 @@ footer {
 		font-size: 21px;
 	}
 
-    .mobile-img {
-    	width: 300px;
-    	height: auto;
-    }
+	.architecture {
+		height: auto; 
+		width: 350px;
+	}
 
     .border-bottom {
-    	margin-left: -20px;
-    	margin-right: -20px;
+    	margin-left: -32.5px;
+    	margin-right: -32.5px;
 		padding-left: 25px;
 		padding-right: 25px;
 	}
@@ -396,7 +442,7 @@ footer {
 		width: 100%;
 		position: fixed;
 		top: 0;
-		right: 0;
+		left: 0;
 		font-size: 13px;
 		text-align: left;
 		background-color: #090B0D;

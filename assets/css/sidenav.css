@@ -13,7 +13,9 @@
 
 /* The navigation menu links */
 .sidenav a {
-    padding: 8px;
+    padding: 0;
+    padding-top: 4px;
+    padding-right: 12px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
@@ -30,9 +32,10 @@
 .sidenav .closebtn {
     position: absolute;
     top: 0;
-    right: 25px;
+    right: 0;
     font-size: 36px;
     margin-left: 50px;
+    font-weight: 400;
 }
 
 .sidenav ul {

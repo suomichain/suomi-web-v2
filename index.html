@@ -27,6 +27,8 @@
     <link href="assets/css/bullet.css" rel="stylesheet">
     <link href="assets/css/timeline.css" rel="stylesheet">
     <link href="assets/css/sidenav.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css"/>    
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -52,7 +54,8 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
             <section class="header">
 
                 <div id="title" class="text-center">
-                    <img id="logo" class="mr-auto ml-auto mt-1" src="assets/images/logo.gif"  alt="logo">
+                    <img id="logo" class="mr-auto ml-auto mt-1 mobile-view" src="assets/images/logo.gif"  alt="logo">
+                    <img id="logo" class="mr-auto ml-auto desktop-view" src="assets/images/logo.gif"  alt="logo">
                     <p class="mt-3 mb-2 pl-5 pr-5">Establish A Global Business Ecosystem For Enterprises and Society </p>
                     <p class="mb-5 pl-5 pr-5">Build, deploy and run highly modular distributed ledgers for multiple needs.</p>
                 </div>
@@ -84,13 +87,13 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
 
             <!-- About us Section
         ================================================== -->
-            <section id="about-us" class="pt-5 pb-5 desktop-view">
-                <div class="row">
+            <section id="about-us" class="border-bottom pt-5 pb-5">
+                <div class="row desktop-view">
                     <div class="col-sm">
                         <img src="assets/images/concept.svg" alt="CONCEPT">
                         <h3 class="text-uppercase mb-2">concept</h3>
                         <p class="text-justify pl-5 pr-5 pb-5">
-                            SUOMI means “Finland” in Finnish; Chinese transliteration锁密 denotes “Lock the secret“ in English. 
+                            SUOMI means “Finland” in Finnish; Chinese transliteration锁密 denotes “Lock the secret“ in English. <br>
                             The essence of SUOMI is a random number generator project based on cryptology, expressed by Public Key and Private Key of The Lock. 
                         </p>
                     </div>
@@ -109,50 +112,35 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                         </p>
                     </div>
                 </div>
-            </section>
-
-            <section id="about-us" class="border-bottom pb-5 mobile-view">
-                <div class="carousel slide" data-ride="carousel"">
-                    <ul class="carousel-indicators">
-                        <li data-target="#about-us" data-slide-to="0" class="active"></li>
-                        <li data-target="#about-us" data-slide-to="1"></li>
-                        <li data-target="#about-us" data-slide-to="2"></li>
-                    </ul>
-
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="assets/images/transparent.png" class="transparent" alt="CONCEPT">
-                            <div class="carousel-caption">
-                                <img src="assets/images/concept.svg" alt="CONCEPT">
-                                <h3 class="text-uppercase">concept</h3>
-                                <p class="text-justify">
-                                    SUOMI means “Finland” in Finnish; Chinese transliteration锁密 denotes “Lock the secret“ in English. 
-                                </p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/images/transparent.png" class="transparent" alt="MISSION">
-                            <div class="carousel-caption">
-                                <img src="assets/images/mission.svg" alt="MISSION">
-                                <h3 class="text-uppercase">mission</h3>
-                                <p class="text-justify">
-                                    To create CHAIN of CHAINS, providing a "Blockchain as a service" platform for public, consortium  and private chains. 
-                                </p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/images/transparent.png" class="transparent" alt="VISION">
-                            <div class="carousel-caption">
-                                <img src="assets/images/vision.svg" alt="VISION">
-                                <h3 class="text-uppercase">vision</h3>
-                                <p class="text-justify">
-                                    To establish a blockchain-technology based, highly-trusted and high throughout global ecosystem for enterprises and society.
-                                </p>
-                            </div>
-                        </div>
+                <div class="single-item pl-2 pr-3 mobile-view">
+                    <div>
+                        <img class="ml-auto mr-auto" src="assets/images/concept.svg" alt="CONCEPT">
+                        <h3 class="text-uppercase">concept</h3>
+                        <p class="text-justify pl-1 pr-1">
+                            SUOMI means “Finland” in Finnish; Chinese transliteration锁密 denotes “Lock the secret“ in English. <br>
+                            The essence of SUOMI is a random number generator project based on cryptology, expressed by Public Key and Private Key of The Lock. 
+                        </p>
                     </div>
-                </div>
+                    <div>
+                        <img class="ml-auto mr-auto" src="assets/images/mission.svg" alt="MISSION">
+                        <h3 class="text-uppercase">mission</h3>
+                        <p class="text-justify pl-1 pr-1">
+                            To create CHAIN of CHAINS, providing a "Blockchain as a service" platform for public, consortium  and private chains. 
+                        </p>
+                    </div>
+                    <div>
+                        <img class="ml-auto mr-auto" src="assets/images/vision.svg" alt="VISION">
+                        <h3 class="text-uppercase">vision</h3>
+                        <p class="text-justify pl-1 pr-1">
+                            To establish a blockchain-technology based, highly-trusted and high throughout global ecosystem for enterprises and society.
+                        </p>
+                    </div>
+                </div>      
             </section>
+
+            <!-- <section id="about-us" class="border-bottom pb-5 mobile-view"> -->
+          
+            <!-- </section> -->
 
             <!-- /.about-us-section -->
 
@@ -172,7 +160,7 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                             <div class="row">
                                 <div class="col-sm mr-3 mb-5">
                                     <img src="assets/images/deployment.svg" alt="DEPLOYMENT">
-                                    <h4>Simplify development</h4>
+                                    <h4>Simplified development</h4>
                                     <p>
                                         Allow developer to use multiple programming languages to build smart contract faster and safer
                                     </p>
@@ -206,7 +194,7 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                             <h3>Features</h3>
                             <div class="row pl-3 mb-3">
                                 <div class="grid-mobile mr-3">
-                                    <h4>Simplify development</h4>
+                                    <h4>Simplified development</h4>
                                     <p>
                                         Allow developer to use multiple programming languages to build smart contract faster and safer
                                     </p>
@@ -455,7 +443,7 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
 
                     <div class="col-sm mobile-view">
                         <h3 class="mb-4">Fast Proof of Work</h3>
-                        <img class="ml-2 mt-4 mb-5 mobile-img" src="assets/images/fastpow.gif
+                        <img class="ml-1 mt-4 mb-5 mobile-img" src="assets/images/fastpow.gif
                         " alt="fast proof of work">
                         <p>Four different node types:</p>
                         <p>General > Candidate > Leader > Restricted</p>
@@ -625,7 +613,7 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                         </div>
                     </li>
                     <li class="timeline-inverted">
-                        <div class="timeline-badge"><span>Jupiter<span></div>
+                        <div class="timeline-badge"><span>Jupiter</span></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4 class="timeline-title">Phase IV  2019 Q4 - SUOMI Delta</h4>
@@ -634,7 +622,7 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                         </div>
                     </li>
                     <li>
-                        <div class="timeline-badge"><span>Saturn<span></div>
+                        <div class="timeline-badge"><span>Saturn</span></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4 class="timeline-title">Phase V 2020  Q4 - SUOMI Epsilon</h4>
@@ -668,6 +656,12 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                             <img src="assets/images/LeifuChen.png" class="rounded-circle" alt="Leifu Chen">
                             <h4>Leifu Chen</h4>
                             <p>CTO</p>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <img src="assets/images/JamesCartwright.png" class="rounded-circle" alt="James Cartwright">
+                            <h4>James Cartwright</h4>
+                            <p>Marketing & Community</p>
                         </div>
 
                         <div class="col-sm-2">
@@ -711,12 +705,6 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                         </div>
 
                         <div class="col-sm-2">
-                            <img src="assets/images/JamesCartwright.png" class="rounded-circle" alt="James Cartwright">
-                            <h4>James Cartwright</h4>
-                            <p>Marketing & Community</p>
-                        </div>
-
-                        <div class="col-sm-2">
                             <img src="assets/images/NicoHotti.png" class="rounded-circle" alt="Nico Hötti">
                             <h4>Nico Hötti</h4>
                             <p>Growth & Investor Relation</p>
@@ -729,85 +717,95 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                         </div>
                     </div>
                 </div>
+         
+                <div class="container mobile-view">
+                    <div class="single-item">
+                        <div class="slider-page-1">
+                            <div class="row">
+                                <div class="grid-mobile">
+                                    <img src="assets/images/JessicaYao.png" class="rounded-circle" alt="Jessica Yao">
+                                    <h4>Jessica Yao</h4>
+                                    <p>Co-founder President</p>
+                                </div>
 
-                <div class="container pl-1 pr-1 mobile-view">   
-                    <div class="row">
-                        <div class="grid-mobile mr-4">
-                            <img src="assets/images/JessicaYao.png" class="rounded-circle" alt="Jessica Yao">
-                            <h4>Jessica Yao</h4>
-                            <p>Co-founder President</p>
+                                <div class="grid-mobile">
+                                    <img src="assets/images/KarlieLuan.png" class="rounded-circle" alt="Karlie Luan">
+                                    <h4>Karlie Luan</h4>
+                                    <p>Founder CEO</p>
+                                </div>
+
+                                <div class="grid-mobile">
+                                    <img src="assets/images/LeifuChen.png" class="rounded-circle" alt="Leifu Chen">
+                                    <h4>Leifu Chen</h4>
+                                    <p>CTO</p>
+                                </div>
+
+                                <div class="grid-mobile">
+                                    <img src="assets/images/IlariAarnio.png" class="rounded-circle" alt="Ilari Aarnio">
+                                    <h4>Ilari Aarnio</h4>
+                                    <p>Algorithm Expert</p>
+                                </div>
+
+                                <div class="grid-mobile">
+                                    <img src="http://via.placeholder.com/100x100" class="rounded-circle" alt="Kimmo Sipilä">
+                                    <h4>Kimmo Sipilä</h4>
+                                    <p>Blockchain Expert</p>
+                                </div>
+
+                                <div class="grid-mobile">
+                                    <img src="assets/images/JyriKoski.png" class="rounded-circle" alt="Jyri Koski">
+                                    <h4>Jyri Koski</h4>
+                                    <p>Platform Test</p>
+                                </div>
+                            </div>
                         </div>
+                        <div>
+                            <div class="row">
+                                <div class="grid-mobile">
+                                    <img src="assets/images/SergeyMasyura.png" class="rounded-circle" alt="Sergey Masyura">
+                                    <h4>Sergey Masyura</h4>
+                                    <p>Software Development</p>
+                                </div>
 
-                        <div class="grid-mobile">
-                            <img src="assets/images/KarlieLuan.png" class="rounded-circle" alt="Karlie Luan">
-                            <h4>Karlie Luan</h4>
-                            <p>Founder CEO</p>
+                                <div class="grid-mobile">
+                                    <img src="assets/images/XiangliMeng.png" class="rounded-circle" alt="Xiangli Meng">
+                                    <h4>Xiangli Meng</h4>
+                                    <p>Algorithm Expert</p>
+                                </div>
+
+                                <div class="grid-mobile">
+                                    <img src="assets/images/ZoeZhang.png" class="rounded-circle" alt="Zoe Zhang">
+                                    <h4>Zoe Zhang</h4>
+                                    <p>IoT & Edge Intelligence</p>
+                                </div>
+
+                                <div class="grid-mobile">
+                                    <img src="assets/images/CarlYin.png" class="rounded-circle" alt="Carl Yin">
+                                    <h4>Carl Yin</h4>
+                                    <p>Edge Intelligence</p>
+                                </div>
+
+                                <div class="grid-mobile">
+                                    <img src="assets/images/JamesCartwright.png" class="rounded-circle" alt="James Cartwright">
+                                    <h4>James Cartwright</h4>
+                                    <p>Marketing & Community</p>
+                                </div>
+
+                                <div class="grid-mobile">
+                                    <img src="assets/images/NicoHotti.png" class="rounded-circle" alt="Nico Hötti">
+                                    <h4>Nico Hötti</h4>
+                                    <p>Growth & Investor Relation</p>
+                                </div>
+                            </div>
                         </div>
-
-                        <div class="grid-mobile mr-4">
-                            <img src="assets/images/LeifuChen.png" class="rounded-circle" alt="Leifu Chen">
-                            <h4>Leifu Chen</h4>
-                            <p>CTO</p>
-                        </div>
-
-                        <div class="grid-mobile">
-                            <img src="assets/images/IlariAarnio.png" class="rounded-circle" alt="Ilari Aarnio">
-                            <h4>Ilari Aarnio</h4>
-                            <p>Algorithm Expert</p>
-                        </div>
-
-                        <div class="grid-mobile mr-4">
-                            <img src="http://via.placeholder.com/100x100" class="rounded-circle" alt="Kimmo Sipilä">
-                            <h4>Kimmo Sipilä</h4>
-                            <p>Blockchain Expert</p>
-                        </div>
-
-                        <div class="grid-mobile">
-                            <img src="assets/images/JyriKoski.png" class="rounded-circle" alt="Jyri Koski">
-                            <h4>Jyri Koski</h4>
-                            <p>Platform Test</p>
-                        </div>
-
-                        <div class="grid-mobile mr-4">
-                            <img src="assets/images/SergeyMasyura.png" class="rounded-circle" alt="Sergey Masyura">
-                            <h4>Sergey Masyura</h4>
-                            <p>Software Development</p>
-                        </div>
-
-                        <div class="grid-mobile">
-                            <img src="assets/images/XiangliMeng.png" class="rounded-circle" alt="Xiangli Meng">
-                            <h4>Xiangli Meng</h4>
-                            <p>Algorithm Expert</p>
-                        </div>
-
-                        <div class="grid-mobile mr-4">
-                            <img src="assets/images/ZoeZhang.png" class="rounded-circle" alt="Zoe Zhang">
-                            <h4>Zoe Zhang</h4>
-                            <p>IoT & Edge Intelligence</p>
-                        </div>
-
-                        <div class="grid-mobile">
-                            <img src="assets/images/CarlYin.png" class="rounded-circle" alt="Carl Yin">
-                            <h4>Carl Yin</h4>
-                            <p>Edge Intelligence</p>
-                        </div>
-
-                        <div class="grid-mobile mr-4">
-                            <img src="assets/images/JamesCartwright.png" class="rounded-circle" alt="James Cartwright">
-                            <h4>James Cartwright</h4>
-                            <p>Marketing & Community</p>
-                        </div>
-
-                        <div class="grid-mobile">
-                            <img src="assets/images/NicoHotti.png" class="rounded-circle" alt="Nico Hötti">
-                            <h4>Nico Hötti</h4>
-                            <p>Growth & Investor Relation</p>
-                        </div>
-
-                        <div class="grid-mobile mr-4">
-                            <img src="assets/images/JesseAuranen.png" class="rounded-circle" alt="Jesse Auranen">
-                            <h4>Jesse Auranen</h4>
-                            <p>Support & Media</p>
+                        <div>
+                            <div class="row">
+                                <div class="grid-mobile">
+                                    <img src="assets/images/JesseAuranen.png" class="rounded-circle" alt="Jesse Auranen">
+                                    <h4>Jesse Auranen</h4>
+                                    <p>Support & Media</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -867,8 +865,8 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                     </div>
 
                 </div>
-                <div class="row mb-5 mobile-view">
-                    <div style="margin-right: auto; margin-left: auto">
+                <div class="row mb-5 center mobile-view">
+                    <div>
                         <div class="card">
                             <img src="http://via.placeholder.com/200x200" alt="Timo Oinonen">
                             <div class="card-container">
@@ -877,7 +875,7 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                             </div>
                         </div>
                     </div>
-                    <div style="display:none;">
+                    <div>
                         <div class="grid-mobile">
                             <div class="card"> 
                                 <img src="http://via.placeholder.com/200x200" alt="Aleksi Nordlund">
@@ -887,7 +885,8 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                                 </div>
                             </div>
                         </div>
-
+                    </div>
+                    <div>
                         <div class="grid-mobile">
                             <div class="card"> 
                                 <img src="http://via.placeholder.com/200x200" alt="Jarmo Suominen">
@@ -897,7 +896,8 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                                 </div>
                             </div>
                         </div>
-
+                    </div>
+                    <div>
                         <div class="grid-mobile">
                             <div class="card"> 
                                 <img src="http://via.placeholder.com/200x200" alt="Jukka Jarvenpää">
@@ -907,7 +907,8 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                                 </div>
                             </div>
                         </div>
-
+                    </div>
+                    <div>                      
                         <div class="grid-mobile">
                             <div class="card"> 
                                 <img src="http://via.placeholder.com/200x200" alt="Thomas Bennet">
@@ -915,6 +916,7 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                                     <h4>Thomas Bennet</h4>
                                     <p>SUOMI Partner, Supply Chain manager of Amazon</p>
                                 </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -956,7 +958,7 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                                 <a href="https://github.com/suomichain/"><i class="fab fa-github icon" aria-hidden="true"></i></a>
                             </div>
                             <div class="col-sm-3">
-                                <a href=""><i class="fab fa-telegram icon" aria-hidden="true"></i></a>
+                                <a href="/"><i class="fab fa-telegram icon" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>
@@ -991,10 +993,9 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                                 <a href="https://github.com/suomichain/"><i class="fab fa-github icon" aria-hidden="true"></i></a>
                             </div>
                             <div>
-                                <a href=""><i class="fab fa-telegram icon" aria-hidden="true"></i></a>
+                                <a href="/"><i class="fab fa-telegram icon" aria-hidden="true"></i></a>
                             </div>
                         </div>
-                    </div>
                     </div>
                 </div>
             </section>
@@ -1023,21 +1024,21 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
             </nav>
         </div>
     </div>
-    <section class="mobile-menu" style="height: 100px;" onclick="openNav()">
-        <img id="logo-small" class="pt-1 pb-1 pl-2" src="assets/images/logo-small.png" style="height: 40px; width: 102px" alt="logo">
-        <img id="menu" class="pt-2 pb-1 pr-2" src="assets/images/menu.png" style="height: 27.5px; width: 27.5px;" alt="menu">
+    <section class="mobile-menu mobile-view" onclick="openNav()">
+        <img id="logo-small" class="pt-1 pb-1 pl-3" src="assets/images/logo-small.png" alt="logo">
+        <img id="menu" class="pb-1 pr-3" src="assets/images/menu.png" alt="menu">
     </section>
     <div class="col-sm-1 desktop-view">
         <nav class="nav-menu mr-5 mt-5">
             <ul>
-                <li class="mb-3"><a href="#about-us">About us<img class="diamond ml-2 mb-1" src="assets/images/diamond.svg"></a></li>
-                <li class="mb-3"><a href="#highlights">Project highlights<img class="diamond ml-2 mb-1" src="assets/images/diamond.svg"></a></li>
-                <li class="mb-3"><a href="#technologies">Key technologies<img class="diamond ml-2 mb-1" src="assets/images/diamond.svg"></a></li>
-                <li class="mb-3"><a href="#scenarios">Typical scenarios<img class="diamond ml-2 mb-1" src="assets/images/diamond.svg"></a></li>
-                <li class="mb-3"><a href="#roadmap">Roadmap<img class="diamond ml-2 mb-1" src="assets/images/diamond.svg"></a></li>
-                <li class="mb-3"><a href="#team">Team<img class="diamond ml-2 mb-1" src="assets/images/diamond.svg"></a></li>
-                <li class="mb-3"><a href="#contact-us">Contact us<img class="diamond ml-2 mb-1" src="assets/images/diamond.svg"></a></li>
-                <li class="mb-3"><a href="#whitepaper">Tech whitepaper<img class="diamond ml-2 mb-1" src="assets/images/diamond.svg"></a></li>
+                <li class="mb-3"><a href="#about-us">About us<img class="ml-2 mb-1" src="assets/images/diamond.svg"></a></li>
+                <li class="mb-3"><a href="#highlights">Project highlights<img class="ml-2 mb-1" src="assets/images/diamond.svg"></a></li>
+                <li class="mb-3"><a href="#technologies">Key technologies<img class="ml-2 mb-1" src="assets/images/diamond.svg"></a></li>
+                <li class="mb-3"><a href="#scenarios">Typical scenarios<img class="ml-2 mb-1" src="assets/images/diamond.svg"></a></li>
+                <li class="mb-3"><a href="#roadmap">Roadmap<img class="ml-2 mb-1" src="assets/images/diamond.svg"></a></li>
+                <li class="mb-3"><a href="#team">Team<img class="ml-2 mb-1" src="assets/images/diamond.svg"></a></li>
+                <li class="mb-3"><a href="#contact-us">Contact us<img class="ml-2 mb-1" src="assets/images/diamond.svg"></a></li>
+                <li class="mb-3"><a href="#whitepaper">Tech whitepaper<img class="ml-2 mb-1" src="assets/images/diamond.svg"></a></li>
             </ul>
         </nav>
     </div>
@@ -1052,6 +1053,7 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     <!-- JavaScript Libraries -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
     <script src="assets/js/theme.js"></script>
 
 </body>

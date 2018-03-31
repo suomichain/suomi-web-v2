@@ -8,6 +8,29 @@ $("nav.nav-menu a").hover(
   }
 );
 
+$('.single-item').slick({
+	dots: true,
+	arrows: false
+});
+
+$('.center').slick({
+  centerMode: true,
+  centerPadding: '10%',
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+  		centerPadding: '10%',
+        centerMode: true,
+        slidesToShow: 3
+      }
+    }
+  ]
+});
+
+
 /* Open the sidenav */
 function openNav() {
     document.getElementById("sidenav").style.height = "100%";
