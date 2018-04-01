@@ -16,7 +16,7 @@ $('.single-item').slick({
 $('.center').slick({
   centerMode: true,
   arrows: false,
-  centerPadding: '20%',
+  centerPadding: '22.5%',
   slidesToShow: 1,
   responsive: [
     {
