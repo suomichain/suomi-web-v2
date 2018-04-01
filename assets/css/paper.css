@@ -1,0 +1,145 @@
+body {
+	font-family: "Titillium Web";
+	font-weight: 200;
+	font-size: 16px;
+	line-height: 22px;
+	background-color: #090B0D;
+	color: #ffffff;
+}
+
+p {
+	opacity: 0.8;
+}
+
+h1 {
+	font-size: 32px;
+	line-height: 48px;
+}
+
+h2 {
+	font-size: 21px; 
+	line-height: 32px;
+}
+
+h3 {
+	margin-top: 20px;	
+	font-size: 16px;
+}
+
+.nav-menu {
+	width: 180px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	font-size: 13px;
+	text-align: right;
+}
+
+.nav-menu a:hover {
+	color: #2cd098;
+}
+
+.nav-menu ul {
+	list-style-type: none;
+}
+
+a:link, 
+a:visited {
+	color: #ccc;
+}
+
+a:active  {
+    color: #ccc;
+    font-weight: 600;
+}
+
+
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.whitepaper {
+	max-width: 800px; 
+}
+
+#menu {
+	padding-top: 15px; 
+	height: 32.5px; 
+	width: 32.5px;
+}
+
+#logo-small {
+	height: 50px; 
+	width: 145px;
+}
+
+.project-name {
+	margin-top: 40px;
+}
+
+
+@media only screen and (max-width: 480px) {
+
+    .desktop-view {
+        display: none;
+    }
+
+    .mobile-img {
+    	width: 350px;
+    	height: auto;
+    }
+
+	.container {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+
+	body {
+		font-family: "Titillium Web";
+		font-weight: 200;
+		font-size: 18px;
+		line-height: 27px;
+		background-color: #090B0D;
+		color: #ffffff;
+	}
+
+	h1 {
+		font-size: 32px;
+		line-height: 48px;
+	}
+
+	h2 {
+		font-size: 27px; 
+		line-height: 40px;
+	}
+
+	h3 {
+		font-size: 21px;
+	}
+
+	.mobile-menu {
+		width: 100%;
+		position: fixed;
+		margin-bottom: 40px;
+		top: 0;
+		right: 0;
+		font-size: 13px;
+		text-align: left;
+		background-color: #090B0D;
+		z-index: 120;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.project-name {
+		margin-top: 80px;
+	}
+
+}
+
+@media only screen and (min-width: 481px) {
+    .mobile-view {
+        display: none;
+    }
+}
