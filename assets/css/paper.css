@@ -26,6 +26,17 @@ h3 {
 	font-size: 16px;
 }
 
+.architecture {
+	height: 450px; 
+	width: auto;
+}
+
+td, th {
+    border: 1px solid #ffffff;
+    text-align: left;
+    padding: 8px;
+}
+
 .nav-menu {
 	width: 180px;
 	position: fixed;
@@ -78,8 +89,11 @@ a:hover {
 	margin-top: 40px;
 }
 
-
 @media only screen and (max-width: 480px) {
+
+	table {
+		font-size: 13px;
+	}
 
     .desktop-view {
         display: none;
