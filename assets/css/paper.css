@@ -26,9 +26,33 @@ h3 {
 	font-size: 16px;
 }
 
+i {
+	color: #2cd098;
+}
+
+pre {
+	color: #090B0D;
+	background-color: #ffffff;
+	padding-left: 0px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-right: 8px; 
+}
+
+hr {
+	color: #cccccc;	
+	width: 1px;
+}
+
 .architecture {
 	height: 450px; 
 	width: auto;
+}
+
+.desktop-img {
+	width: 350px;
+	height: auto;
+	margin-bottom: 20px;
 }
 
 td, th {
