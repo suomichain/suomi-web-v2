@@ -430,57 +430,73 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     <img class="ml-0 mt-3 desktop-img" src="assets/images/contract.gif" alt="Highly Expressive and Safe Smart Contract">
 
     <p>The proposed solution is to decouple the transactional logic layer by domain. Compared with the design of a common transaction logic layer, this approach can be used to address the area of security threats through specific rules. SUOMI calls this domain-specific business rule “transaction library”, which provides a highly restrictive and expressive package of business logic in the domain.</p>
-    <div style="display: none;">
-    Transaction Libraries
-    There are many forms of transaction libraries. SUOMI allows developers to choose the complexity of the transaction libraries, such as a simple logic to verify business format or complex virtual machine running smart contracts.
-    The design of smart contracts needs to balance the contract's functionality and security. However, if the trading engine is only for a particular area, it would be relatively easy to limit the contract's behavior on the blockchain to improve security. From this point of view, SUOMI has designed the transaction libraries for smart contract languages to help developers develop, test, and validate use cases rapidly. The first phase of SUOMI provides the following transaction libraries:
-    User Registry
-    Hello World
-    Supply Chain
-    AI DAO
-    SmiEth
-    On-chain Configuration
-    Users can build their own transaction libraries to meet the unique needs of their business. Taking the consortium chain of financial markets as an example. All parties in the alliance can make detailed specification on the data formats and behaviors that the transaction library can operate. The operation may cause illegal and inappropriate consequence could be excluded.
-    Sample Transaction Library: Block Explorer
-    Transaction processing engine consists of two parts: transaction processor and business logic. SDK is responsible for the blockchain transaction processing part while the latter is provided by the transaction libraries. This section describes the transaction libraries while generic SDK will be described in detail in the next section of the trading engine.
-    Take block explorer as an example. The block info could store the following information: 
-    The most recent block id in the list
-    The oldest block id in the list
-    The block id to be queried in the list
-    The tolerance of the network sync
-    These values can be stored in the following data structure:
 
-    Transaction payload data structure is as follows:
+    <h3>3.2.1 Transaction Libraries</h3>
+    <p>There are many forms of transaction libraries. SUOMI allows developers to choose the complexity of the transaction libraries, such as a simple logic to verify business format or complex virtual machine running smart contracts.</p>
+    <p>The design of smart contracts needs to balance the contract's functionality and security. However, if the trading engine is only for a particular area, it would be relatively easy to limit the contract's behavior on the blockchain to improve security. From this point of view, SUOMI has designed the transaction libraries for smart contract languages to help developers develop, test, and validate use cases rapidly. The first phase of SUOMI provides the following transaction libraries:</p>
+    <ol>
+        <li>User Registry</li>
+        <li>Hello World</li>
+        <li>Supply Chain</li>
+        <li>AI DAO</li>
+        <li>SmiEth</li>
+        <li>On-chain Configuration</li>
+    </ol>
+    <p>Users can build their own transaction libraries to meet the unique needs of their business. Taking the consortium chain of financial markets as an example. All parties in the alliance can make detailed specification on the data formats and behaviors that the transaction library can operate. The operation may cause illegal and inappropriate consequence could be excluded.</p>
+    <h3>Sample Transaction Library: Block Explorer</h3>
+    <p>Transaction processing engine consists of two parts: transaction processor and business logic. SDK is responsible for the blockchain transaction processing part while the latter is provided by the transaction libraries. This section describes the transaction libraries while generic SDK will be described in detail in the next section of the trading engine.</p>
+    <p>Take block explorer as an example. The block info could store the following information: </p>
+    <ol>
+        <li>The most recent block id in the list</li>
+        <li>The oldest block id in the list</li>
+        <li>The block id to be queried in the list</li>
+        <li>The tolerance of the network sync</li>
+    </ol>
+    <p>These values can be stored in the following data structure:</p>
+        <pre>
+            message BlockInfoConfig {
+                uint64 latest_block = 1;
+                uint64 oldest_block = 2;
+                uint64 target_count = 3;
+                uint64 sync_tolerance = 4;
+            }</pre>
+    <p>Transaction payload data structure is as follows:</p>
+        <pre>
+            message BlockInfoTxn {
+                BlockInfo new_block = 1;
+                uint64 target_count = 2;
+                uint64 sync_tolerance = 3;
+            }</pre>
+    <h2>3.3 SUOMI Transaction Processing Engine（STPE）</h2>
+    <p>SUOMI Transaction Processing Engine (STPE) supports stateless UTXO and stateful models. It also supports both Ethereum Smart Contracts via EVM and SDKs that allow developers to develop their own smart contracts in many popular programming languages. The architecture of STPE is shown as below.</p>
+    <p>SUOMI Transaction Processing Engine offers a wide range of SDKs, provides RESTful APIs and supports JSON format and also the formal analysis of smart contracts.</p>
+    <h2>3.3.1 Java SDK</h2>
+    <p>STPE consists of two major components: transaction processor and business logic. The SDK mainly includes the general blockchain transaction processing part and the business logic part is provided by the domain transaction libraries. The transaction libraries have been introduced in the previous section, so this section mainly uses the JAVA SDK as an example for illustration. Other SDKs are designed with similar principles.</p>
+    <p>The SDK interacts with the transaction library in two ways:</p>
+    <ol>
+    <li><i>Apply</i> Method</li>
+    <li><i>Metadata</i> Method</li>
+    </ol>
 
-    SUOMI Transaction Processing Engine（STPE）
-    SUOMI Transaction Processing Engine (STPE) supports stateless UTXO and stateful models. It also supports both Ethereum Smart Contracts via EVM and SDKs that allow developers to develop their own smart contracts in many popular programming languages. The architecture of STPE is shown as below.
-    SUOMI Transaction Processing Engine offers a wide range of SDKs, provides RESTful APIs and supports JSON format and also the formal analysis of smart contracts.
-    Java SDK
-    STPE consists of two major components: transaction processor and business logic. The SDK mainly includes the general blockchain transaction processing part and the business logic part is provided by the domain transaction libraries. The transaction libraries have been introduced in the previous section, so this section mainly uses the JAVA SDK as an example for illustration. Other SDKs are designed with similar principles.
-    The SDK interacts with the transaction library in two ways:
-    Apply Method
-    Metadata Method
-    Apply method is invoked through the business request and state store. In general, it has four steps:
-    Unpack the trading instructions
-    Get data from the context manager
-    Execute the transaction
-    Save the updated data
-    The code example is as follows:
+    <p><i>Apply</i> method is invoked through the business request and state store. In general, it has four steps:</p>
+    <ol>
+    <li>Unpack the trading instructions</li>
+    <li>Get data from the context manager</li>
+    <li>Execute the transaction</li>
+    <li>Save the updated data</li>
+    </ol>
 
-    The second way is through Metadata method interacts with the transaction libraries. The metadata is used for registration of the trading engine while the registration includes the type of transaction will be processed. The sample code is as follows：
+    <p>The second way is through <i>Metadata</i> method interacts with the transaction libraries. The metadata is used for registration of the trading engine while the registration includes the type of transaction will be processed. </p>
 
-    Transaction data can be divided into two parts: headers and payloads. The header contains a signature of the current trader, while payload contains the compression of the transaction data, such as transaction name, action, resource usage and external data dependencies.
-    Here is the example of transaction decompression:
+    <p>Transaction data can be divided into two parts: headers and payloads. The header contains a signature of the current trader, while payload contains the compression of the transaction data, such as transaction name, action, resource usage and external data dependencies.</p>
+    
+    <p>The next step is to save the status of the transaction. First, we need to encrypt the data, and then save the encrypted data to the transaction's address. Finally, we show the process of the encoding and decoding of data. </p>
 
-    Below is the example of getting transaction data:
-    The following example shows how to create a transaction address:
+    <h3>3.3.2 RESTful API</h3>
+    <p>SUOMI supports the RESTful API to facilitate the integration of third-party wallets or block explorers for the establishment of the ecosystem. </p>
+    <div style="display: none">
+    Below is a list of typical API descriptions:
 
-    The next step is to save the status of the transaction. First, we need to encrypt the data, and then save the encrypted data to the transaction's address.
-
-    Finally, we show the process of the encoding and decoding of data. Take the most common UTF-8 as an example:
-
-    RESTful API
-    SUOMI supports the RESTful API to facilitate the integration of third-party wallets or block explorers for the establishment of the ecosystem. Below is a list of typical API descriptions:
     GET /infos
     Instructions：
     Fetches the data for the current state
@@ -558,27 +574,64 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     400 Bad Request – Request was malformed
     500 Internal Server Error – Something wrong in the node  
     503 Service unavailable – Not able to response in time
-    Formal Analysis
-    SUOMI's processing engine also performs formal checks on smart contracts to ensure security:
-    Step
-    Description
-    Output
-    1.Define data model
-    Define interface
-    API specs
-    Define data structure
-    Data structure specs
-    2.Define service spec
-    Define service types
-    Service docs
-    Validate dependencies
-    External dependencies doc
-    3.Verify contract behaviour
-    Define scenarios
-    Test case report
-    Formal analysis
-    Contract logic verification
-</div>
+    </div>
+    <h3>3.3.3 Formal Analysis</h3>
+    <p>SUOMI's processing engine also performs formal checks on smart contracts to ensure security:</p>
+
+    <table class="formal-analysis mt-3 mb-3">
+    <tr>
+        <th>Step</th>
+        <th>Description</th>
+        <th>Output</th>
+    </tr>
+    <tr>
+        <td>1.Define data model</td>
+        <td>
+            <ul>
+                <li>Define interface</li>
+                <li>Define data structure</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>API specs</li>
+                <li>Data structure specs</li>
+            </ul>            
+        </td>
+    </tr>
+    <tr>
+        <td>2.Define service spec</td>
+        <td>
+            <ul>
+                <li>Define service types</li>
+                <li>Validate dependencies</li>
+            </ul>            
+        </td>
+        <td>
+            <ul>
+                <li>Service docs</li>
+                <li>External dependencies doc</li>
+            </ul>              
+        </td>
+    </tr>
+
+    <tr>
+        <td>3.Verify contract behaviour</td>
+        <td>
+            <ul>
+                <li>Define scenarios</li>
+                <li>Formal analysis</li>
+            </ul>               
+        </td>
+        <td>
+            <ul>
+                <li>Test case report</li>
+                <li>Contract logic verification</li>
+            </ul>                  
+        </td>
+    </tr>
+    </table>
+        
     <h1>4. SUOMI Applications</h1>
     <p>Blockchain and next-generation information technologies such as cloud computing, big data, the Internet of things, 5G, artificial intelligence, have full potential to integrate together to create a new economy area. The application scenarios are very broad.</p>
     <h2>4.1 Supply Chain Finance</h2>
