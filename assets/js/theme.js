@@ -41,3 +41,17 @@ function openNav() {
 function closeNav() {
     document.getElementById("sidenav").style.height = "0";
 }
+
+function submitForm(){
+  if (validateEmail(document.getElementById('mce-EMAIL').value)) {
+      document.getElementById('response').style.display="none";
+      document.getElementById('mc-embedded-subscribe-form').submit();
+  } else {
+    document.getElementById('response').style.display="block";
+  }
+}
+
+function validateEmail(email) {
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
