@@ -197,6 +197,35 @@ footer {
 	width: 32.5px;
 }
 
+#mc_embed_signup input.email {
+	font-size: 15px;
+	font-weight: 200;
+	padding:0 0.4em; 
+	margin:0 0 20px 0; 
+	min-height:32px; 
+	width:50%; 
+	min-width:130px; 
+	border: solid 1px #2cd098;
+	border-radius: 3px;
+	background-color: #090B0D;
+	color: #fff;
+}
+
+.subscribe-icon:hover {
+	font-weight: 500;
+}
+
+#response {
+	display:none;
+	color:#933435;
+	margin-bottom: 10px;
+}
+
+input.email::placeholder {
+	color: #ccc;
+	opacity: 0.6;
+}
+
 @media only screen and (max-width: 480px) {
 	#scenarios .grid-mobile {
 		width: 180px;
@@ -470,4 +499,15 @@ footer {
     .mobile-view {
         display: none;
     }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1400px){
+	img.background {
+	    position:absolute;
+	    left:0px;
+	    top:400px;
+	    z-index:-1;
+	    width: 100%;
+	    height: auto;
+	}
 }

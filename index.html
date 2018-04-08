@@ -28,13 +28,14 @@
     <link href="assets/css/timeline.css" rel="stylesheet">
     <link href="assets/css/sidenav.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css"/>    
+    <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css"/>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
 
 </head>
 
@@ -62,25 +63,41 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
 
                 <div class="mt-3 text-center">
                     <p class="subscribe mb-4">subscribe us to get further surprise</p>
-                    <div id="subscribe-icons">
-                        <div class="row subscribe-icon p-3 pl-5 pr-5 mr-4 desktop-view">                
-                            <i class="fas fa-envelope small-icon pt-1 mr-2" aria-hidden="true"></i>
-                            <span>Subscribe</span>
+                    <span id="response" style="display:none;color:#933435;margin-bottom: 10px;">You email address is invalid.</span>
+                    <div id="mc_embed_signup">
+                        <form action="https://suomichain.us18.list-manage.com/subscribe/post?u=4e6b57e742dded362cf0096f9&amp;id=40098ba9c6" method="post" id="mc-embedded-subscribe-form" name="subscribe" class="validate" target="_blank" novalidate>
+                            <div id="mc_embed_signup_scroll">
+                                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                    <input type="text" name="b_4e6b57e742dded362cf0096f9_40098ba9c6" tabindex="-1" value="">
+                                </div>
+                            </div>
+                        </form>
+
+                        <div id="subscribe-icons">
+                            <div class="row subscribe-icon p-3 pl-5 pr-5 mr-4 desktop-view">                
+                                <a href="javascript:submitForm()">
+                                <i class="fas fa-envelope small-icon pt-1 mr-2" aria-hidden="true"></i>
+                                <span>Subscribe</span></a>
+                            </div>
+                            <div class="row subscribe-icon p-3 pl-5 pr-5 ml-4 desktop-view">
+                                <a href="https://t.me/suomichain"><i class="fab fa-telegram small-icon pt-1 mr-2" aria-hidden="true"></i><span>Telegram</span></a>
+                            </div> 
+                            <div class="row subscribe-icon p-3 pl-4 pr-4 mr-3 mobile-view">                
+                                 <a href="javascript:submitForm()">
+                                <i class="fas fa-envelope small-icon mt-1 mr-1" aria-hidden="true"></i>
+                                <span>Subscribe</span></a>
+                            </div>
+                            <div class="row subscribe-icon p-3 pl-4 pr-4 ml-3 mobile-view">
+                                <a href="https://t.me/suomichain"><i class="fab fa-telegram small-icon mt-1 mr-1" aria-hidden="true"></i><span>Telegram</span></a>
+                            </div> 
                         </div>
-                        <div class="row subscribe-icon p-3 pl-5 pr-5 ml-4 desktop-view">
-                            <i class="fab fa-telegram small-icon pt-1 mr-2" aria-hidden="true"></i>
-                            <span>Telegram</span>
-                        </div> 
-                        <div class="row subscribe-icon p-3 pl-4 pr-4 mr-3 mobile-view">                
-                            <i class="fas fa-envelope small-icon mt-1 mr-1" aria-hidden="true"></i>
-                            <span>Subscribe</span>
-                        </div>
-                        <div class="row subscribe-icon p-3 pl-4 pr-4 ml-3 mobile-view">
-                            <i class="fab fa-telegram small-icon mt-1 mr-1" aria-hidden="true"></i>
-                            <span>Telegram</span>
-                        </div> 
                     </div>
                 </div>
+
+
+
 
             </section>
             <!-- /.hero-section -->
@@ -951,7 +968,7 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                                 <a href="https://github.com/suomichain/"><i class="fab fa-github icon" aria-hidden="true"></i></a>
                             </div>
                             <div class="col-sm-3">
-                                <a href="/"><i class="fab fa-telegram icon" aria-hidden="true"></i></a>
+                                <a href="https://t.me/suomichain"><i class="fab fa-telegram icon" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>
@@ -986,7 +1003,7 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
                                 <a href="https://github.com/suomichain/"><i class="fab fa-github icon" aria-hidden="true"></i></a>
                             </div>
                             <div>
-                                <a href="/"><i class="fab fa-telegram icon" aria-hidden="true"></i></a>
+                                <a href="https://t.me/suomichain"><i class="fab fa-telegram icon" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1049,6 +1066,8 @@ the data-spy and data-target are part of the built-in Bootstrap scrollspy functi
     <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
     <script src="assets/js/theme.js"></script>
 
+    <!-- MailChimp -->
+    <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us18.list-manage.com","uuid":"4e6b57e742dded362cf0096f9","lid":"40098ba9c6"}) })</script>
 </body>
 
 </html>
