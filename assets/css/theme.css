@@ -10,12 +10,18 @@ body {
 img.background {
     position:absolute;
     left:0px;
-    top:300px;
+    top:350px;
     z-index:-1;
     width: 100%;
     height: auto;
 }
 
+.gray {
+	width: 160px; 
+	height: 160px; 
+	object-fit: cover; 
+	filter: grayscale();
+}
 img.rounded-circle {
 	height: 100px;
 	width: auto;
@@ -522,7 +528,7 @@ input.email::placeholder {
 	img.background {
 	    position:absolute;
 	    left:0px;
-	    top:450px;
+	    top:440px;
 	    z-index:-1;
 	    width: 100%;
 	    height: auto;
