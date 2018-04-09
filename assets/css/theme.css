@@ -30,8 +30,8 @@ p {
 }
 
 h2 {
-	margin-top: 100px;
-	margin-bottom: 100px;
+	margin-top: 60px;
+	margin-bottom: 60px;
 	font-size: 32px;
 	line-height: 48px;
 }
@@ -69,6 +69,7 @@ a:hover {
 }
 
 section {
+    padding-top: 5px;
 	text-align: center;
 }
 
