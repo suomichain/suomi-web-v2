@@ -62,7 +62,6 @@ a:active  {
     font-weight: 600;
 }
 
-
 a:hover {
     color: white;
     text-decoration: none;
@@ -166,8 +165,25 @@ footer {
 	color: #2cd098;
 }
 
+span.demo-text  {
+	font-size: 28px; 
+	color: #2cd098; 
+	font-weight: 200;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+span.demo-text:hover {
+	font-weight: 600;
+}
+
 .small-icon {
 	font-size: 18px; 
+	color: #2cd098;
+}
+
+.big-icon {
+	font-size: 24px; 
 	color: #2cd098;
 }
 
@@ -506,7 +522,7 @@ input.email::placeholder {
 	img.background {
 	    position:absolute;
 	    left:0px;
-	    top:400px;
+	    top:450px;
 	    z-index:-1;
 	    width: 100%;
 	    height: auto;
