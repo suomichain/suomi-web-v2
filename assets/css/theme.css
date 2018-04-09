@@ -22,6 +22,7 @@ img.background {
 	object-fit: cover; 
 	filter: grayscale();
 }
+
 img.rounded-circle {
 	height: 100px;
 	width: auto;
@@ -249,7 +250,15 @@ input.email::placeholder {
 	opacity: 0.6;
 }
 
+
 @media only screen and (max-width: 480px) {
+	.gray {
+		width: 200px; 
+		height: 200px; 
+		object-fit: cover; 
+		filter: grayscale();
+	}
+
 	#scenarios .grid-mobile {
 		width: 180px;
 	}
