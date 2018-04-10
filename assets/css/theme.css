@@ -10,7 +10,7 @@ body {
 img.background {
     position:absolute;
     left:0px;
-    top:350px;
+    top:330px;
     z-index:-1;
     width: 100%;
     height: auto;
@@ -26,6 +26,7 @@ img.background {
 img.rounded-circle {
 	height: 100px;
 	width: auto;
+	filter: grayscale();
 }
 
 p {
@@ -252,6 +253,10 @@ input.email::placeholder {
 
 
 @media only screen and (max-width: 480px) {
+	#mc_embed_signup input.email {
+		width:70%;  
+	}
+
 	.gray {
 		width: 200px; 
 		height: 200px; 
@@ -358,7 +363,7 @@ input.email::placeholder {
 	img.background {
 	    position:absolute;
 	    left:0px;
-	    top:700px;
+	    top:680px;
 	    z-index:-1;
 	    width: 100%;
 	    height: auto;
@@ -439,7 +444,7 @@ input.email::placeholder {
 	img.background {
 	    position:absolute;
 	    left:0px;
-	    top:700px;
+	    top:680px;
 	    z-index:-1;
 	    width: 100%;
 	    height: auto;
@@ -533,11 +538,11 @@ input.email::placeholder {
     }
 }
 
-@media only screen and (min-width: 800px) and (max-width: 1400px){
+@media only screen and (min-width: 500px) and (max-width: 1400px){
 	img.background {
 	    position:absolute;
 	    left:0px;
-	    top:440px;
+	    top:400px;
 	    z-index:-1;
 	    width: 100%;
 	    height: auto;

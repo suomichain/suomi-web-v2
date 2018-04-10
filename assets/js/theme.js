@@ -101,3 +101,9 @@ $(document).ready(function() {
     fixedContentPos: false
   });
 });
+
+$("#mce-EMAIL").keyup(function(event) {
+    if (event.keyCode === 13) {
+        submitForm();
+    }
+});
