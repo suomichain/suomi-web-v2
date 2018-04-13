@@ -26,6 +26,19 @@ h3 {
 	font-size: 16px;
 }
 
+ul.guide
+{
+	list-style-type: none;
+	list-style-position: outside;
+	margin-bottom: 0px;
+}
+
+ol.guide
+{
+	margin-top: 0px;	
+	list-style-position: inside;
+}
+
 i {
 	color: #2cd098;
 }
@@ -62,7 +75,7 @@ td, th {
 }
 
 .nav-menu {
-	width: 180px;
+	width: 200px;
 	position: fixed;
 	top: 0;
 	right: 0;
