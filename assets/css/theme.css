@@ -103,6 +103,10 @@ footer {
 	justify-content: center;
 }
 
+#subscribe-icons a {
+	width: 240px;
+}
+
 .text-uppercase {
 	margin-bottom: 10px;
 }
