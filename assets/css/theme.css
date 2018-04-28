@@ -375,7 +375,7 @@ input.email::placeholder {
 	img.background {
 	    position:absolute;
 	    left:0px;
-	    top:680px;
+	    top:720px;
 	    z-index:-1;
 	    width: 100%;
 	    height: auto;
@@ -461,7 +461,7 @@ input.email::placeholder {
 	img.background {
 	    position:absolute;
 	    left:0px;
-	    top:680px;
+	    top:740px;
 	    z-index:-1;
 	    width: 100%;
 	    height: auto;
