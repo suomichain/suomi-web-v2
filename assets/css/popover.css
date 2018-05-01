@@ -43,3 +43,23 @@
     top: 100px;
   }
 }
+
+@media only screen and (max-width: 400px) {
+  .popover-content {
+    margin-left: -10px;
+    font-size: 12px;
+    line-height: 18px;
+    width: 330px;
+  }
+  .popover-right {
+    margin-left: -160px;
+  }
+  .popover-top {
+    top: 230px;
+  }
+
+  .popover-right-top {
+    margin-left: -160px;
+    top: 100px;
+  }
+}
