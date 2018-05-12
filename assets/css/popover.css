@@ -29,13 +29,14 @@
     margin-left: -10px;
     font-size: 14px;
     line-height: 20px;
+    margin-top: 5px;
     width: 360px;
   }
   .popover-right {
     margin-left: -180px;
   }
   .popover-top {
-    top: 230px;
+    top: 250px;
   }
 
   .popover-right-top {
@@ -55,7 +56,7 @@
     margin-left: -160px;
   }
   .popover-top {
-    top: 230px;
+    top: 250px;
   }
 
   .popover-right-top {

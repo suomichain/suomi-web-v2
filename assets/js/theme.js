@@ -107,3 +107,15 @@ $("#mce-EMAIL").keyup(function(event) {
         submitForm();
     }
 });
+
+
+$(document).ready(function () {
+    //Disable full page
+    $('body').bind('cut copy paste', function (e) {
+        e.preventDefault();
+    });
+
+    $("body").on("contextmenu",function(e){
+        return false;
+    });
+});
